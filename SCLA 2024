@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, 
+                   initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Background Light</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      transition: background-color 0.5s;
+      cursor: pointer;
+    }
+    .background-dim {
+      background-color: #2c3e50;
+    }
+    .background-light {
+      background-color: #ecf0f1;
+    }
+  </style>
+</head>
+<body class="background-dim">
+  <script>
+    const body = document.body;
+
+    body.addEventListener('click', () => {
+      body.classList.toggle('background-light');
+      body.classList.toggle('background-dim');
+    });
+  </script>
+</body>
+</html>
+<body>
+    <script>
+        function turnOnOff() {
+            let image = document.getElementById('Image');
+            if (image.src.match("ONbulb"))
+                image.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg";
+            else
+                image.src =
+"https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg";
+        }
+    </script>
+ 
+    <img id="Image" onclick="turnOnOff()" src=
+"https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg">
+ 
+    <p>
+      
+    </p>
+</body>
+ 
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Bulb Toggle with Text Color Change</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      transition: background-color 0.5s;
+    }
+    .light-bulb {
+      width: 100px;
+      height: 180px;
+      background: 
+      background-size: contain;
+      cursor: pointer;
+      transition: background 0.5s;
+    }
+    .light-bulb.on {
+      background: 
+      background-size: contain;
+    }
+    .background-dim {
+      background-color: #2c3e50;
+    }
+    .background-light {
+      background-color: #ecf0f1;
+    }
+    .text {
+      font-size: 24px;
+      margin-top: 20px;
+      transition: color 0.5s;
+    }
+    .text-light {
+      color: #2c3e50;
+    }.text-dim {
+      color: #ecf0f1;
+    }
+  </style>
+</head>
+<body class="background-dim">
+  <div class="light-bulb"></div>
+  <div class="text text-dim">Click the light bulb to toggle the light</div>
+  <script>
+    const lightBulb = document.querySelector('.light-bulb');
+    const body = document.body;
+    const text = document.querySelector('.text');
+
+    lightBulb.addEventListener('click', () => {
+      lightBulb.classList.toggle('on');
+      body.classList.toggle('background-light');
+      body.classList.toggle('background-dim');
+      text.classList.toggle('text-light');
+      text.classList.toggle('text-dim');
+    });
+  </script>
+</body>
+</html>
+</html>
